@@ -1,16 +1,8 @@
-
-
 class Oyun():
-
-    
     def __init__(self):
         print("Oyun yaradildi")
 
-
 class Chess (Oyun):
-    
-
-
     def __init__(self):
         super().__init__()
         self.ad="Şahmat"
@@ -41,16 +33,13 @@ class Chess (Oyun):
         else:
             return False
 
-
     def hereket_L_sekilde(self,fiqur):
         self.hereket="L_sekilde hereket"
         self.fiqur=fiqur
         if self.fiqur=="At":
             return True
         else:
-            return False
-        
-        
+            return False          
 
     def vezire_cixmaq(self, fiqur):
         self.hereket="vezire cixma gedisini"
@@ -59,8 +48,6 @@ class Chess (Oyun):
             return True
         else:
             return False
-    
-
 
     def qala_qurmaq(self, fiqur):
         self.hereket="qala qurma gedisini"
@@ -70,7 +57,6 @@ class Chess (Oyun):
         else:
             return False
         
-
     def uzerinden_tullanmaq(self, fiqur):
         self.fiqur=fiqur
         self.hereket="fiqur üzerinden tullanma gedisini"
@@ -78,7 +64,6 @@ class Chess (Oyun):
             return True
         else:
             return False
-
 
     def yoxla(self,fiqur):
         self.fiqur=fiqur
@@ -143,8 +128,6 @@ class Dama(Oyun):
 
 dama=Dama()
 sahmat = Chess()
-
-
 
 def oyuncu(obj1,obj2):
     print("{} oyununun novu {} , oyuncu sayi {}".format(obj1.ad,obj1.nov(),obj1.oyuncu_sayi()))
